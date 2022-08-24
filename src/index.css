@@ -1,0 +1,7 @@
+.objectname div{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  border:2px solid black;
+  padding: 2rem;
+  /* border-radius: 2px; */
+}
