@@ -7,12 +7,14 @@ function App() {
   const [showData, setShowData] = useState();
   const [search, setSearch] = useState();
 
+
   useEffect(() => {
     handleClick();
   }, []);
 
   const handleClick = () => {
     let newDater = Data.filter((data) => data["Car_model-year"] >= 2005);
+    const sort= newDater.sort()
     setShowData(newDater);
   };
 
@@ -64,6 +66,7 @@ function App() {
             <tbody>
               {showData &&
                 showData.map((item, id) => {
+                  const sort= showData.sort()
                   return (
                     <tr key={id}>
                       <td>{item.first_name}</td>
